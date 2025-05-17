@@ -1,0 +1,65 @@
+Oczywiście! Poniżej masz **pełne polecenie zadania BMI Kalkulator**, tak jak mogłoby wyglądać na sprawdzianie lub egzaminie praktycznym.
+
+---
+
+## 📝 **Polecenie: Kalkulator BMI**
+
+Twoim zadaniem jest stworzenie **aplikacji desktopowej** w języku **Python z użyciem PyQt6 oraz QtDesigner**, która oblicza **wskaźnik BMI** (Body Mass Index) na podstawie podanych danych użytkownika.
+
+---
+
+### 🎯 Funkcjonalność aplikacji:
+
+1. Użytkownik wpisuje swoją **wagę (w kilogramach)** oraz **wzrost (w centymetrach)**.
+2. Użytkownik wybiera swoją **płeć** za pomocą dwóch **RadioButtonów**: „kobieta” oraz „mężczyzna”.
+3. Po kliknięciu przycisku **„Oblicz BMI”**, program:
+
+   * Oblicza wartość BMI według wzoru:
+
+     $$
+     BMI = \frac{waga}{(wzrost / 100)^2}
+     $$
+   * Wyświetla wynik BMI w specjalnym polu (np. etykiecie lub `QLineEdit` tylko do odczytu).
+   * Określa kategorię BMI:
+
+     * BMI < 18.5 → „Niedowaga”
+     * 18.5 ≤ BMI < 25 → „Waga prawidłowa”
+     * 25 ≤ BMI < 30 → „Nadwaga”
+     * BMI ≥ 30 → „Otyłość”
+   * Wyświetla komentarz o stanie zdrowia.
+   * Zmienia **kolor tła** tego komentarza w zależności od wyniku:
+
+     * Niebieski: niedowaga
+     * Zielony: waga prawidłowa
+     * Pomarańczowy: nadwaga
+     * Czerwony: otyłość
+
+---
+
+### 🎨 Wymagania co do interfejsu:
+
+* Tytuł okna: `BMI Kalkulator`
+* Pola edycyjne do:
+
+  * `Waga (kg)` – tylko liczby
+  * `Wzrost (cm)` – tylko liczby
+* Przycisk: `Oblicz BMI`
+* Pole wynikowe: wyświetla obliczony BMI
+* Etykieta komentarza (np. „Waga prawidłowa”) – z kolorowym tłem zależnym od kategorii
+* RadioButtony:
+
+  * `kobieta`
+  * `mężczyzna`
+    *(Uwaga: płeć nie wpływa na BMI, ale jest wymagana jako element interfejsu)*
+
+---
+
+### 🧠 Wskazówki:
+
+* Do przekształcenia wzrostu na metry użyj: `wzrost_cm / 100`
+* Wynik BMI możesz zaokrąglić np. `round(bmi, 2)`
+* Pamiętaj o konwersji tekstu z pól edycyjnych: `float(wagaEdit.text())`
+
+---
+
+Kiedy będziesz gotowy, wklej swój kod, a chętnie sprawdzę i pomogę go dopracować.
